@@ -71,3 +71,5 @@ class(A)
 name <- "John Doe"
 
 class(name)
+
+

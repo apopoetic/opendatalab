@@ -7,6 +7,18 @@ editor: visual
 
 # Getting Started: Syntax and Semantics
 
+::: callout-note
+Learning Objectives
+
+-   Install and set up R and RStudio
+
+-   Understand basic R syntax, data types and data structures
+
+-   Run and save simple analysis and plots
+
+-   Learn good reproducible-workflow habits (projects, sessionInfo, saving output)
+:::
+
 ```{r}
 2+2 #try this in the console as well
 ```
@@ -61,16 +73,44 @@ z <- x + y
 
 Functions can be passed as arguments to other functions and can be returned as values from other functions.
 
-add_numbers \<- function(a, b) { return(a + b) } add_numbers(3, 5)
+```{r}
+add_numbers <- function(a, b) { 
+                                return(a + b) } 
 
-apply_function \<- function(f, x) { return(f(x)) } apply_function(sqrt, 16) \# Output: 4
+add_numbers(3, 5)
 
-#R is an interpreted language #R is an interpreted language, which means that it executes code line by line. #This is in contrast to compiled languages, which convert the entire code into machine code before executing it.
+apply_function <- function(f, x) { 
+                                  return(f(x)) }
 
-#R is dynamically typed #R is dynamically typed, which means that you don't have to specify the type of a variable when you declare it. #The type of a variable is determined at runtime based on the value assigned to it.
+apply_function(sqrt, 16) #Output: 4
+```
 
+**R is an interpreted language**: which means that it executes code line by line. This is in contrast to compiled languages, which convert the entire code into machine code before executing it.
+
+**R is dynamically typed**: which means that you don't have to specify the type of a variable when you declare it. The type of a variable is determined at run time based on the value assigned to it.
+
+```{r}
 class(A)
-
-name \<- "John Doe"
-
+name <- "John Doe"
 class(name)
+```
+
+## Data Types and Structures
+
+Data come in various forms. For example, most common data types could be numeric (numbers), text, date/time, geospatial data, A data could be a number, text, date/ time, or logical (eg. TRUE or FALSE, DEAD or ALIVE etc.), NA etc. We will talk about them when we encounter them. These data can be stored in different forms for a computer program to read. Most common form of data is in tables which is called data frame or tibbles in programming lingo. Again, we are not going to burden ourselves with them at this moment. We will cross the bridge when we come to it.
+
+## Summary
+
+At the end of this lecture you should be able to :
+
+-   Know where to type code
+
+-   Where to see the solution of your code
+
+-   Understand how R interprets your code
+
+-   What is a function
+
+    ### What's in the next session
+
+We will start with the R for Data science book. You can access the book [here](https://r4ds.hadley.nz/ "R4DS").
